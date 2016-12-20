@@ -1,0 +1,14 @@
+{
+  "NodeNames": {
+    "root": "HmlParser",
+    "paragraph": "Paragraph",
+    "text": "Text",
+    "char": "Char",
+    "equation": "Equation"
+  },
+  "NodeAttributes": {
+    "newPage": "NewPage"
+  },
+  "htmlHeader": "<!doctype html>\n<html lang=\"ko\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>MathJax</title>\n    <script src=\"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>\n    <script type=\"text/x-mathjax-config\">\n      MathJax.Hub.Config({\n        tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}\n      });\n    </script>\n  </head>\n  <body>",
+  "htmlFooter": "</body></html>"
+}
