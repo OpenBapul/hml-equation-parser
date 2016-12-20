@@ -9,7 +9,17 @@ with codecs.open(os.path.join(os.path.dirname(__file__),
 
 def hmlEquation2latex(hmlEqStr: str) -> str:
     '''
-    Convert hmlEquation string 2 latex string.
+    Convert hmlEquation string to latex string.
+
+    Parameters
+    ----------------------
+    hmlEqStr : str
+        A hml equation string to be converted.
+    
+    Returns
+    ----------------------
+    out : str
+        A converted latex string.
     '''
     def replaceBracket(strList: List[str]) -> List[str]:
         '''

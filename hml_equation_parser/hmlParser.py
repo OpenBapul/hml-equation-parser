@@ -12,7 +12,15 @@ with codecs.open(os.path.join(os.path.dirname(__file__),
 def parseHml(fileName: str) -> ElementTree:
     '''
     This is the sample code for parse .hml document and make ElementTree.
-    a `hmlEquation2latex` function are used to convert equation string only.
+    
+    Parameters
+    ----------------------
+    fileName : str
+        fileName to be parsed.
+    Returns
+    ----------------------
+    out : ElementTree
+        An parsed ElementTree object.
     '''
     xmlText = open(fileName, 'r').read()
     
