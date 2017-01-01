@@ -15,12 +15,10 @@ except:
 
 setup (
         name                    = 'hml_equation_parser',
-        version                 = '1.0.11',
-        py_modules              = ['hml_equation_parser'],
+        version                 = '1.0.12',
         packages                = ['hml_equation_parser'],
-        package_data            = {'hml_equation_parser': ['*.json']},
+        package_data            = {'': ['*.json']},
         install_requires        = ['pypandoc'],
-        include_package_data    = True,
         author                  = 'Hyeongseok.Oh.hulk',
         author_email            = 'snuboy89@gmail.com',
         url                     = "https://github.com/OpenBapul/hml-equation-parser",
