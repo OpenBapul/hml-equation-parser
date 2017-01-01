@@ -6,3 +6,5 @@ hml_equation_parser/convertMap.json
 hml_equation_parser/hmlParser.py
 hml_equation_parser/hulkEqParser.py
 hml_equation_parser/hulkReplaceMethod.py
+README.md
+LICENSE

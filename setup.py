@@ -1,18 +1,25 @@
 from setuptools import setup
 from codecs import open
 from os import path
-import pypandoc
 
-here = path.abspath(path.dirname(__file__))
-# brew install pandoc, pip install pypandoc
-long_description = pypandoc.convert(path.join(here, 'README.md'), 'rst')
+desc = 'Convert eqaution string in hml to latex string.'
+
+try:
+    import pypandoc
+    # brew install pandoc, pip install pypandoc
+    here = path.abspath(path.dirname(__file__))
+    long_description = pypandoc.convert(path.join(here, 'README.md'), 'rst')
+
+except:
+    long_description = desc
 
 setup (
         name                    = 'hml_equation_parser',
-        version                 = '1.0.3',
+        version                 = '1.0.11',
         py_modules              = ['hml_equation_parser'],
         packages                = ['hml_equation_parser'],
         package_data            = {'hml_equation_parser': ['*.json']},
+        install_requires        = ['pypandoc'],
         include_package_data    = True,
         author                  = 'Hyeongseok.Oh.hulk',
         author_email            = 'snuboy89@gmail.com',
@@ -24,6 +31,6 @@ setup (
             'License :: OSI Approved :: Apache Software License',
             'Programming Language :: Python :: 3.5',
         ],
-        description             = 'Convert eqaution string in hml to latex string.',
+        description             = desc,
         long_description        = long_description,
     )
