@@ -46,7 +46,7 @@ def parseHml(fileName: str) -> ElementTree:
         
         text = paragraph.find("TEXT")
         if text is not None:
-            for child in text.getchildren():
+            for child in text.iter():
                 if child.tag == "CHAR":
                     value = child.text
 
@@ -76,7 +76,7 @@ def convertEquation(doc: ElementTree) -> str:
     Convert equation with sample ElementTree.
     '''
     for paragraph in doc.findall(config["NodeNames"]["paragraph"]):
-        for child in paragraph.getchildren():
+        for child in paragraph.iter():
             if child.tag == config["NodeNames"]["equation"]:
                 child.text = hmlEquation2latex(child.text)
     return doc
@@ -96,7 +96,7 @@ def extract2HtmlStr(doc: ElementTree) -> str:
         if paragraph.get(config["NodeAttributes"]["newPage"]) == "true":
             paragraphStringList.append("<br>======================<br>")
 
-        for child in paragraph.getchildren():
+        for child in paragraph.iter():
             if child.tag == config["NodeNames"]["char"]:
                 paragraphStringList.append(convertSpace2nbsp(child.text))
             elif child.tag == config["NodeNames"]["equation"]:
